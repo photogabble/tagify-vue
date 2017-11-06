@@ -1,5 +1,5 @@
 {
-  "name"        : "photogabble/tagify-vue",
+  "name"        : "@photogabble/tagify-vue",
   "version"     : "1.0.0",
   "homepage"    : "https://github.com/photogabble/tagify-vue",
   "description" : "A vue.js wrapper for tagify.",
