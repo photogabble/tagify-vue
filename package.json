@@ -1,0 +1,26 @@
+{
+  "name"        : "photogabble/tagify-vue",
+  "version"     : "1.0.0",
+  "homepage"    : "https://github.com/photogabble/tagify-vue",
+  "description" : "A vue.js wrapper for tagify.",
+  "_npmUser"    : {
+    "name"  : "photogabble",
+    "email" : "simon.dann@gmail.com"
+  },
+  "author": {
+    "name"  : "Simon Dann",
+    "email" : "simon.dann@gmail.com"
+  },
+  "main"        : "tagify.vue",
+  "repository"  : {
+    "type" : "git",
+    "url"  : "git+https://github.com/photogabble/tagify-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/photogabble/tagify-vue/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@yaireo/tagify": "yairEO/tagify"
+  }
+}
