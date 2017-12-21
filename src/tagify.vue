@@ -1,6 +1,6 @@
 <template>
     <div class="tagify">
-        <input :name="name" :placeholder="placeholder" v-model="internalValue">
+        <input ref="tagifyinput" :name="name" :placeholder="placeholder" v-model="internalValue">
     </div>
 </template>
 
@@ -12,12 +12,19 @@
     mounted() {
       this.internalValue = this.value
 
-      t = new Tagify(
-        document.querySelector('input[name='+this.name+']'), this.config
-      )
+      let init = () => {
+        let newT
+        newT = new Tagify(
+          this.$refs.tagifyinput, this.config
+        )
 
-      t.on('remove', this.updateInternalValue)
-      t.on('add', this.updateInternalValue)
+        newT.on('remove', this.updateInternalValue)
+        newT.on('add', this.updateInternalValue)
+        return newT;
+      }
+
+      t = init()
+      this.$emit('tInit', t)
     },
     beforeDestroy: function () {
       t.destroy()
